@@ -1,0 +1,14 @@
+{
+  "name": "smart-transport-billing-system",
+  "version": "1.0.0",
+  "description": "Smart Telugu Voice-Based Transport Billing System for Sri Mallikarjuna Transport",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "cd backend && npm test"
+  },
+  "author": "Google DeepMind / Antigravity",
+  "license": "ISC"
+}
