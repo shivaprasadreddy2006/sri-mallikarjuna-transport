@@ -22,20 +22,21 @@ RUN apt-get update && apt-get install -y \
 
 # Tell Puppeteer to use installed Chromium
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium \
-    NODE_ENV=production \
-    PORT=5000
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 WORKDIR /app
 
-# 1. Build frontend
+# 1. Build frontend (install devDependencies so vite is available)
 COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm install
+RUN cd frontend && npm install --include=dev
 
 COPY frontend/ ./frontend/
 RUN cd frontend && npm run build
 
-# 2. Setup backend
+# 2. Setup backend with production dependencies
+ENV NODE_ENV=production \
+    PORT=5000
+
 COPY backend/package*.json ./backend/
 RUN cd backend && npm install --production
 
