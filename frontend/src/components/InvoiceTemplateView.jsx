@@ -293,7 +293,7 @@ export default function InvoiceTemplateView({ invoice }) {
       </div>
 
       {/* Footer / Bank Details & Signature */}
-      <div className="grid grid-cols-12 gap-3 text-[10.5px] mt-2 items-end">
+      <div className="grid grid-cols-12 gap-3 text-[10.5px] mt-2 items-start">
         <div className="col-span-7 space-y-0.5 text-neutral-900 leading-tight">
           <div className="flex">
             <span className="w-24 font-semibold">Account Name:</span>
@@ -317,8 +317,8 @@ export default function InvoiceTemplateView({ invoice }) {
           </div>
         </div>
 
-        <div className="col-span-5 text-center pt-8">
-          <div className="border-t-2 border-black inline-block min-w-[210px] pt-1">
+        <div className="col-span-5 text-right pt-[64px]">
+          <div className="border-t-2 border-black inline-block min-w-[210px] text-center pt-1">
             <div className="font-bold text-[10.5px] tracking-wider uppercase text-black">
               {signatureText}
             </div>
