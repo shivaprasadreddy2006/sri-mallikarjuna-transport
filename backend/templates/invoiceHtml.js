@@ -128,7 +128,7 @@ function generateInvoiceHtml(invoice) {
   <style>
     @page {
       size: A4 portrait;
-      margin: 22mm 20mm 20mm 20mm;
+      margin: 0;
     }
     * {
       box-sizing: border-box;
@@ -137,7 +137,18 @@ function generateInvoiceHtml(invoice) {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", sans-serif;
       color: #000;
       background: #fff;
@@ -145,8 +156,8 @@ function generateInvoiceHtml(invoice) {
       line-height: 1.25;
     }
     .invoice-container {
-      width: 100%;
-      max-width: 670px;
+      width: 170mm;
+      max-width: 170mm;
       margin: 0 auto;
       background: #fff;
     }

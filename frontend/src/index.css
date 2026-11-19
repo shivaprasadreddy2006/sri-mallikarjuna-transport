@@ -27,10 +27,24 @@
   background: #94a3b8;
 }
 
-/* Print specific rules */
+/* Print specific rules - perfectly centered single A4 sheet */
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  html, body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
   body {
-    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .no-print {
     display: none !important;

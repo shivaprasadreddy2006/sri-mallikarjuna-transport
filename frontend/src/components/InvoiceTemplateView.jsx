@@ -151,7 +151,7 @@ export default function InvoiceTemplateView({ invoice }) {
 
       <div className="w-full overflow-x-auto pb-2 flex justify-center">
         <div
-          className={`w-[670px] min-w-[670px] bg-white text-black p-6 sm:p-8 shadow-xl border border-slate-300 font-sans print:shadow-none print:border-none print:p-0 print:w-full print:min-w-0 text-[11px] leading-snug transition-transform origin-top ${
+          className={`w-[670px] min-w-[670px] bg-white text-black p-6 sm:p-8 shadow-xl border border-slate-300 font-sans print:shadow-none print:border-none print:p-0 print:w-[170mm] print:max-w-[170mm] print:min-w-0 print:mx-auto text-[11px] leading-snug transition-transform origin-top ${
             zoomFit ? 'scale-[0.52] sm:scale-100 -mb-[280px] sm:mb-0' : 'scale-100 mb-0'
           }`}
         >

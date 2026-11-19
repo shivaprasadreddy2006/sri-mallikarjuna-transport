@@ -77,16 +77,16 @@ async function generateInvoicePdfBuffer(invoiceData) {
       timeout: 30000,
     });
 
-    // Generate exact A4 PDF
+    // Generate exact A4 PDF with vertically centered invoice content
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true,
       margin: {
-        top: '22mm',
-        bottom: '20mm',
-        left: '20mm',
-        right: '20mm',
+        top: '0mm',
+        bottom: '0mm',
+        left: '0mm',
+        right: '0mm',
       },
     });
 
