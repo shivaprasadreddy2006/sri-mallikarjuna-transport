@@ -317,7 +317,7 @@ export default function InvoiceTemplateView({ invoice }) {
           </div>
         </div>
 
-        <div className="col-span-5 text-right pt-[64px]">
+        <div className="col-span-5 text-right pt-[100px]">
           <div className="border-t-2 border-black inline-block min-w-[210px] text-center pt-1">
             <div className="font-bold text-[10.5px] tracking-wider uppercase text-black">
               {signatureText}

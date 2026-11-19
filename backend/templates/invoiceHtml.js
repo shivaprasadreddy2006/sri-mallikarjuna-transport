@@ -381,7 +381,7 @@ function generateInvoiceHtml(invoice) {
     .signature-col {
       width: 45%;
       text-align: right;
-      padding-top: 72px;
+      padding-top: 110px;
     }
     .signature-box {
       display: inline-block;
